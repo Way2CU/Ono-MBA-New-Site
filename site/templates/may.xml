@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<cms:svg file="site-sprite.svg" />
+			<!-- Generic header -->
+			<cms:template file="stock/header_generic.xml">
+				<param name="fixed" value=""/>
+				<param name="menu" value="parts/menu_items.xml"/>
+				<param name="logo" value="logo.svg"/>
+				<param name="phone" value="phone"/>
+				<param name="phone_sprite_icon" value="icon-phone"/>
+				<param name="sprite" value="site_sprite.svg"/>
+			</cms:template>
+
+			<!-- Section header-->
+			<section id="header" class="may">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="header_may"
+					group="may"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h1"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
+
+			</section>
+		</body>
+	</html>
+</document>
