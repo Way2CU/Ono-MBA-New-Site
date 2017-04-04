@@ -71,3 +71,147 @@ section#header.may svg {
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }
+
+/*
+ * Section patch disscount and contact form
+*/
+
+section#register {
+	padding: 3em calc(~'(100% - 1200px)' / 2);
+}
+
+section#register div.form_container,
+section#register div.disscount {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+section#register div.disscount {
+	padding:0 4em;
+}
+
+section#register div.disscount > h2 {
+	text-align: center;
+	font-size: 3rem;
+	color: @color_green;
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+section#register div.disscount article {
+	background-color: @color_green;
+	color: white;
+	text-align: center;
+	padding: 1em;
+	transform: rotate(5deg);
+	border: 3px dashed white;
+}
+
+section#register div.disscount article h2 {
+	margin: 0;
+	font-size: 3.5rem;
+}
+
+section#register div.disscount article p {
+	font-size: 2rem;
+	margin: 0;
+}
+
+section#register div.form_container {
+	background-color: @color_grey_light;
+	padding: 0 1em;
+	padding: 1em;
+}
+
+section#register div.form_container h2 {
+	margin: 0;
+	font-size: 3rem;
+	border-bottom: 2px solid @color_grey;
+	padding-top: 0.5em;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+section#register div.form_container form {
+	margin-top: 1em;
+}
+
+section#register div.form_container form label {
+	display: block;
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+section#register div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 130px;
+	font-size: 1.5rem;
+}
+
+section#register div.form_container form label span:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+	margin-left: 0.5em;
+
+	background-image: url(../images/name.svg);
+	background-size: 35px 35px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section#register div.form_container form label:nth-of-type(2) span:before {
+	background-image: url(../images/phone-form.svg);
+}
+
+section#register div.form_container form label:nth-of-type(3) span:before {
+	background-image: url(../images/email.svg);
+}
+
+section#register div.form_container form label:nth-of-type(4) span:before {
+	background-image: url(../images/subject.svg);
+}
+
+
+section#register div.form_container form label select,
+section#register div.form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding: 1em 0.5em;
+	width: calc(~'(100% - 130px)');
+	background-color: white;
+
+	border: 1px solid @color_grey;
+	transition: all 0.3s;
+
+	&:hover,
+	&:focus {
+		border: 1px solid @color_green,
+	}
+}
+
+section#register div.form_container form div.controls {
+	text-align: center;
+}
+
+section#register div.form_container form div.controls button {
+	color: white;
+	border: none;
+	background-color: @color_green;
+	font-size: 1.5rem;
+	padding: 0.5em 1em;
+	font-weight: 700;
+
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: lighten(@color_green, 10%);
+		cursor: pointer;
+	}
+}
