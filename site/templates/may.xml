@@ -8,7 +8,7 @@
 		</head>
 
 		<body>
-			<cms:svg file="site-sprite.svg" />
+			<cms:svg file="site_sprite.svg" />
 			<!-- Generic header -->
 			<cms:template file="stock/header_generic.xml">
 				<param name="fixed" value=""/>
