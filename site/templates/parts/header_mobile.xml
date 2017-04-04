@@ -1,0 +1,27 @@
+<document>
+	<header>
+		<!-- Phone -->
+		<a
+			href="'tel:'.urlencode(Language::get_Text('phone'))"
+			cms:eval="href"
+			class="phone"
+			>
+			<cms:svg file="site_sprite.svg" symbol="icon-phone" />
+		</a>
+
+		<!-- form icon-->
+		<a href="#register" class="register">
+			<cms:svg file="site_sprite.svg" symbol="icon-form"/>
+			<cms:text constant="sign_in_now" />
+		</a>
+
+		<!-- logo -->
+		<a href="#top" class="logo">
+			<img
+				src="_BASEURL.'/site/images/logo.svg'"
+				alt="site_title"
+				cms:eval="src"
+				/>
+		</a>
+	</header>
+</document>
