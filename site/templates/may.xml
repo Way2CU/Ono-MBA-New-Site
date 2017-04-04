@@ -64,6 +64,124 @@
 				</div>
 			</section>
 
+			<!-- Section features -->
+			<section id="features" class="may">
+
+				<!-- Top header article of section -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="features_header"
+					group="may"
+					template="stock/article_generic.xml"
+					/>
+
+				<!-- Features -->
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="features_may"
+						template="stock/features_generic.xml"
+						>
+						<param name="sprite" value="site_sprite.svg"/>
+					</cms:module>
+				</ul>
+			</section>
+
+			<!-- Section subjects -->
+			<section id="subjects">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="subjects_may"
+					group="may"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+				<div class="logos">
+					<h4><cms:text constant="logos_title" /></h4>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="logos_may"
+						template="parts/gallery_image_template.xml"
+						>
+						<param name="thumbnail_size" value="150"/>
+					</cms:module>
+				</div>
+			</section>
+
+			<!-- Section graduates -->
+			<h2 class="graduates"><cms:text constant="graduates"/></h2>
+
+			<section id="graduates">
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="graduates_may"
+					template="parts/gallery_image_template.xml"
+					>
+					<param name="thumbnail_size" value="300"/>
+					<param name="description" value=""/>
+					<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+
+			<!-- Section graduates -->
+			<h2 class="tutors"><cms:text constant="tutros"/></h2>
+
+			<section id="tutors">
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="tutors_may"
+					template="parts/gallery_image_template.xml"
+					>
+					<param name="thumbnail_size" value="300"/>
+					<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<!-- Footer -->
+			<footer>
+				<!-- Logo and phone -->
+				<div class="contact">
+
+					<!-- Logo -->
+					<a href="#top" class="logo">
+						<cms:svg file="logo.svg" />
+					</a>
+
+				<h3><cms:text constant="changing_society" /></h3>
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone" />
+						<cms:svg file="site_sprite.svg" symbol="icon-phone" />
+					</a>
+				</div>
+
+				<!-- Contact form with constant h2 -->
+				<div class="form_container">
+					<h2><cms:text constant="fill_in"/></h2>
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact_may"
+					/>
+				</div>
+			</footer>
+			<cms:template file="stock/copyright.xml">
+				<param name="holder" value="copyright_holder"/>
+				<param name="text" value="copyright_text"/>
+				<param name="light" value=""/>
+			</cms:template>
 		</body>
 	</html>
 </document>
