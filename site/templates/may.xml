@@ -108,8 +108,12 @@
 					<param name="title_tag" value="h2"/>
 					<param name="title" value=""/>
 				</cms:module>
+
+				<!-- Logos gallery -->
 				<div class="logos">
 					<h4><cms:text constant="logos_title" /></h4>
+
+					<!-- Desktop version -->
 					<cms:module
 						name="gallery"
 						action="show_image_list"
@@ -125,45 +129,89 @@
 			<h2 class="graduates"><cms:text constant="graduates"/></h2>
 
 			<section id="graduates">
-				<cms:module
-					name="gallery"
-					action="show_image_list"
-					group="graduates_may"
-					template="parts/gallery_image_template.xml"
-					>
-					<param name="thumbnail_size" value="300"/>
-					<param name="description" value=""/>
-					<param name="title" value=""/>
-				</cms:module>
+				<!-- Desktop version -->
+				<cms:desktop>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="graduates_may"
+						template="parts/gallery_image_template.xml"
+						>
+						<param name="thumbnail_size" value="300"/>
+						<param name="description" value=""/>
+						<param name="title" value=""/>
+					</cms:module>
+				</cms:desktop>
+
+				<!-- Mobile version -->
+				<cms:mobile>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="graduates_may"
+						template="parts/gallery_image_template.xml"
+						>
+						<param name="thumbnail_size" value="150"/>
+						<param name="description" value=""/>
+						<param name="title" value=""/>
+					</cms:module>
+				</cms:mobile>
 			</section>
 
 
-			<!-- Section graduates -->
+			<!-- Section tutors -->
 			<h2 class="tutors"><cms:text constant="tutros"/></h2>
 
 			<section id="tutors">
-				<cms:module
-					name="gallery"
-					action="show_image_list"
-					group="tutors_may"
-					template="parts/gallery_image_template.xml"
-					>
-					<param name="thumbnail_size" value="300"/>
-					<param name="title" value=""/>
-				</cms:module>
+				<!-- Desktop version -->
+				<cms:desktop>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="tutors_may"
+						template="parts/gallery_image_template.xml"
+						>
+						<param name="thumbnail_size" value="300"/>
+						<param name="title" value=""/>
+					</cms:module>
+				</cms:desktop>
+
+				<!-- Mobile version -->
+				<cms:mobile>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="tutors_may"
+						template="parts/gallery_image_template.xml"
+						>
+						<param name="thumbnail_size" value="150"/>
+						<param name="title" value=""/>
+					</cms:module>
+				</cms:mobile>
 			</section>
 
 			<!-- Footer -->
 			<footer>
-				<!-- Logo and phone -->
-				<div class="contact">
 
+				<!-- Mobile form order of appearance -->
+				<cms:mobile>
+					<div class="form_container">
+						<h2><cms:text constant="fill_in"/></h2>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_may"
+						/>
+					</div>
+				</cms:mobile>
+
+				<div class="contact">
 					<!-- Logo -->
 					<a href="#top" class="logo">
 						<cms:svg file="logo.svg" />
 					</a>
 
-				<h3><cms:text constant="changing_society" /></h3>
+					<h3><cms:text constant="changing_society" /></h3>
 					<a
 						href="'tel:'.urlencode(Language::get_Text('phone'))"
 						cms:eval="href"
@@ -175,15 +223,19 @@
 				</div>
 
 				<!-- Contact form with constant h2 -->
-				<div class="form_container">
-					<h2><cms:text constant="fill_in"/></h2>
-				<cms:module
-					name="contact_form"
-					action="show"
-					text_id="contact_may"
-					/>
-				</div>
+				<cms:desktop>
+					<div class="form_container">
+						<h2><cms:text constant="fill_in"/></h2>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_may"
+						/>
+					</div>
+				</cms:desktop>
 			</footer>
+
+			<!-- Copyright -->
 			<cms:template file="stock/copyright.xml">
 				<param name="holder" value="copyright_holder"/>
 				<param name="text" value="copyright_text"/>
