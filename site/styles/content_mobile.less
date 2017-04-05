@@ -27,6 +27,8 @@ section#header.may article {
 	background-color: fade(white, 90%);
 	color: @color_green;
 	text-align: center;
+	box-sizing: border-box;
+	padding: 0.5em;
 }
 
 section#header.may article h1 {
@@ -49,9 +51,398 @@ section#header.may svg {
 	left: 50%;
 	transform: translateX(-50%);
 
-	width: 5rem;
-	height: 5rem;
+	width: 3rem;
+	height: 3rem;
 
 	border-radius: 100%;
 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*
+ * Section patch disscount and contact form
+*/
+
+section#register div.disscount {
+	text-align: center;
+	background-color: @color_green;
+
+	background-image: url(../images/circle.svg);
+	background-repeat: no-repeat;
+	background-size: 100vw auto;
+	background-position: center 1em;
+	margin-bottom: 3em;
+}
+
+section#register div.disscount > h2 {
+	margin: 0;
+	color: @color_green;
+	padding-top: 3em;
+	width: 80vw;
+	margin: 0 auto;
+	padding-bottom: 1em;
+}
+
+section#register div.disscount article {
+	background-color: @color_green;
+	color: white;
+	text-align: center;
+	padding: 1em;
+	transform: rotate(5deg);
+	border: 3px dashed white;
+	width: 70vw;
+	margin: 0 auto;
+}
+
+section#register div.disscount article h2  {
+	color: white;
+	margin: 0;
+}
+
+section#register div.disscount article p {
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+div.form_container {
+	background-color: @color_grey_light;
+}
+
+div.form_container h2 {
+	margin: 0;
+	padding: 0.5em;
+	background-color: @color_grey;
+	color: white;
+	text-align: center;
+}
+
+div.form_container form {
+	margin-top: 1em;
+	box-sizing: border-box;
+	padding: 0 0.5em;
+}
+
+div.form_container form label {
+	display: block;
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 90px;
+}
+
+div.form_container form label span:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	margin-left: 0.5em;
+
+	background-image: url(../images/name.svg);
+	background-size: 30px 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+div.form_container form label:nth-of-type(2) span:before {
+	background-image: url(../images/phone-form.svg);
+}
+
+div.form_container form label:nth-of-type(3) span:before {
+	background-image: url(../images/email.svg);
+}
+
+div.form_container form label:nth-of-type(4) span:before {
+	background-image: url(../images/subject.svg);
+}
+
+
+div.form_container form label select,
+div.form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding: 1em 0.5em;
+	width: calc(~'(100% - 90px)');
+	background-color: white;
+
+	border: 1px solid @color_grey;
+	transition: all 0.3s;
+
+	&:hover,
+	&:focus {
+		border: 1px solid @color_green,
+	}
+}
+
+div.form_container form div.controls {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+div.form_container form div.controls button {
+	color: white;
+	border: none;
+	background-color: @color_green;
+	font-size: 1.5rem;
+	padding: 0.5em 1em;
+	font-weight: 700;
+}
+
+/*
+ * Section features
+*/
+section#features {
+	padding: 1em;
+	background-image:  url(../images/circle.svg), linear-gradient(180deg, @color_grey_light 50%, white 50%);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100vw auto;
+
+}
+
+section#features article {
+	text-align: center;
+	padding-top: 4em;
+	width: 80vw;
+	margin: 0 auto;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+}
+
+section#features article p {
+	margin: 0;
+	color: @color_grey;
+}
+
+section#features article h2 {
+	color: @color_green;
+	margin: 0;
+	padding: 1em 0;
+}
+
+section#features ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+section#features ul li {
+	display: block;
+	list-style: none;
+	box-sizing: border-box;
+	padding: 1em;
+	padding-bottom: 0.5em;
+
+	border-bottom: 1px solid @color_grey;
+}
+
+section#features ul li svg {
+	width: 4rem;
+	height: 4rem;
+}
+
+/*
+ * Section subjects
+*/
+
+section#subjects article {
+	background-color: @color_grey_light;
+	text-align: center;
+}
+
+section#subjects article h2 {
+	color: white;
+	background-color: @color_grey;
+	padding: 0.5em;
+	margin: 0;
+}
+
+section#subjects article h2:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 55px;
+	margin: 0 auto;
+	margin-bottom: 1em;
+
+	background-image: url(../images/location.svg);
+	background-repeat: no-repeat;
+	background-size: 45px 54px;
+	background-position: center;
+}
+
+
+section#subjects article h3 {
+	color: @color_grey;
+	padding: 1em 0;
+	margin: 0;
+}
+
+section#subjects article p {
+	margin: 0;
+	color: @color_grey;
+	padding-bottom: 1em;
+	font-size: 1.2rem;
+}
+
+section#subjects article ul {
+	margin: 0;
+}
+
+section#subjects article ul li {
+	padding-bottom: 1em;
+	text-align: initial;
+	color: @color_grey;
+	line-height: 100%;
+}
+
+section#subjects div.logos {
+	text-align: center;
+	padding: 1em 0.5em;
+}
+
+section#subjects div.logos h4 {
+	color: @color_grey;
+	padding-bottom: 0.5em;
+	margin: 0;
+	border-bottom: 1px solid @color_grey;
+	margin-bottom: 1em;
+}
+
+section#subjects div.logos figure {
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	margin: 0.5em;
+}
+
+
+/*
+ * Section graduates
+*/
+
+section#tutors,
+section#graduates {
+	padding: 1em;
+	background-color: @color_grey_light;
+	text-align: center;
+}
+h2.tutors,
+h2.graduates {
+	background-color: @color_grey;
+	color: white;
+	text-align: center;
+	padding: 1em 0;
+	margin: 0;
+}
+
+section#tutors figure,
+section#graduates figure {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0.5em;
+	text-align: center;
+	max-width: 120px;
+}
+
+section#tutors figure img,
+section#graduates figure img {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+section#tutors figure h4,
+section#graduates figure h4 {
+	color: @color_grey;
+	margin: 0;
+	padding: 0.5em;
+}
+
+section#graduates figure p {
+	margin: 0;
+}
+
+/*
+ * Section tutors (styles connected in section graduates)
+*/
+
+h2.tutors {
+	background-color: @color_green;
+}
+
+section#tutors {
+	background-color: fade(@color_green, 30%);
+}
+
+/*
+ * Footer
+*/
+
+footer div.contact {
+	text-align: center;
+
+	background-image: url(../images/mobile_footer.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;
+	padding-bottom: 5rem;
+}
+
+footer div.contact a.logo {
+	display: block;
+	margin: 0 auto;
+	padding: 1em 0;
+	width: 50vw;
+}
+
+footer div.contact a.logo svg {
+	display: block;
+}
+
+footer div.contact h3 {
+	color: @color_green;
+	margin: 0 auto;
+	padding-bottom: 1em;
+	text-align: center;
+	width: 80vw;
+}
+
+footer div.contact a.phone {
+	border: 2px solid @color_green;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	width: 50%;
+	color: @color_green;
+	padding: 0.5em;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
+}
+
+footer div.contact a.phone svg {
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1em;
+}
+
+/*
+ * Copyright
+*/
+
+div.copyright {
+	background-color: @color_grey;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 100px') center;
+}
+
+div.copyright a {
+	color: #08b8c7;
+	text-decoration: none;
 }
