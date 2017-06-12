@@ -26,7 +26,37 @@
 				<cms:template file="parts/header_mobile.xml" />
 			</cms:mobile>
 
+			<section class="thankyou">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="thankyou"
+					group="thankyou_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h1"/>
+				</cms:module>
 
+				<!-- Mobile image -->
+				<cms:mobile>
+					<img
+						src="_BASEURL.'/site/images/header_thankyou.jpg'"
+						alt="lecure_image"
+						cms:eval="src"
+						/>
+				</cms:mobile>
+
+				<!-- Youtube video -->
+				<div class="video">
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="thankyou_video"
+						template="parts/video.xml"
+						/>
+				</div>
+			</section>
 
 			<!-- Copyright -->
 			<cms:template file="stock/copyright.xml">
