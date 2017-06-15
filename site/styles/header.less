@@ -23,7 +23,10 @@ header a.logo img {
 }
 
 header a.phone {
-	float: left;
+	position: absolute;
+	left:  calc(~'(50% - 600px)');
+	top: 50%;
+	transform: translateY(-50%);
 	direction: ltr;
 	padding: 1rem 0;
 	text-decoration: none;
@@ -32,6 +35,7 @@ header a.phone {
 	font-weight: 800;
 	line-height: 100%;
 	transition: all 0.3s;
+
 
 	&:hover {
 		color: fade(@color_green, 50%);
