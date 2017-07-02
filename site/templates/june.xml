@@ -30,7 +30,6 @@
 
 			<!-- Section header-->
 			<section id="header">
-
 				<cms:module
 					name="articles"
 					action="show"
@@ -41,8 +40,6 @@
 					<param name="title_tag" value="h1"/>
 					<param name="title" value=""/>
 				</cms:module>
-
-
 
 				<span class="arrow">
 					<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
@@ -70,11 +67,11 @@
 				<!-- Contact form with constant h2 -->
 				<div class="form_container">
 					<h2><cms:text constant="fill_in"/></h2>
-				<cms:module
-					name="contact_form"
-					action="show"
-					text_id="contact_june"
-					/>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_june"
+						/>
 				</div>
 			</section>
 
@@ -204,11 +201,11 @@
 				<cms:mobile>
 					<div class="form_container">
 						<h2><cms:text constant="fill_in"/></h2>
-					<cms:module
-						name="contact_form"
-						action="show"
-						text_id="contact_june"
-						/>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_june"
+							/>
 					</div>
 				</cms:mobile>
 
@@ -233,11 +230,11 @@
 				<cms:desktop>
 					<div class="form_container">
 						<h2><cms:text constant="fill_in"/></h2>
-					<cms:module
-						name="contact_form"
-						action="show"
-						text_id="contact_june"
-						/>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_june"
+							/>
 					</div>
 				</cms:desktop>
 			</footer>
@@ -248,8 +245,9 @@
 				<param name="text" value="copyright_text"/>
 				<param name="light" value=""/>
 			</cms:template>
-							<!-- Popup Articles -->
-				<cms:template file="parts/june_links.xml">
+
+			<!-- Popup Articles -->
+			<cms:template file="parts/june_links.xml"/>
 		</body>
 	</html>
 </document>
