@@ -29,24 +29,28 @@
 			</cms:mobile>
 
 			<!-- Section header-->
-			<section id="header" class="may">
+			<section id="header">
+
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="header_may"
-					group="may"
+					text_id="header_june"
+					group="june"
 					template="stock/article_generic.xml"
 					>
 					<param name="title_tag" value="h1"/>
 					<param name="title" value=""/>
 				</cms:module>
+
+
+
 				<span class="arrow">
 					<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
 				</span>
 			</section>
 
 			<!-- Section form and disscount -->
-			<section id="register" class="may">
+			<section id="register">
 
 				<!-- Constant header and article patch disscount -->
 				<div class="disscount">
@@ -54,8 +58,8 @@
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="disscount_may"
-						group="may"
+						text_id="disscount_june"
+						group="june"
 						template="stock/article_generic.xml"
 						>
 						<param name="title_tag" value="h2"/>
@@ -69,20 +73,20 @@
 				<cms:module
 					name="contact_form"
 					action="show"
-					text_id="contact_may"
+					text_id="contact_june"
 					/>
 				</div>
 			</section>
 
 			<!-- Section features -->
-			<section id="features" class="may">
+			<section id="features">
 
 				<!-- Top header article of section -->
 				<cms:module
 					name="articles"
 					action="show"
 					text_id="features_header"
-					group="may"
+					group="june"
 					template="stock/article_generic.xml"
 					/>
 
@@ -91,7 +95,7 @@
 					<cms:module
 						name="articles"
 						action="show_list"
-						group="features_may"
+						group="features_june"
 						template="stock/features_generic.xml"
 						>
 						<param name="sprite" value="site_sprite.svg"/>
@@ -104,8 +108,8 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="subjects_may"
-					group="may"
+					text_id="subjects_june"
+					group="june"
 					template="stock/article_generic.xml"
 					>
 					<param name="title_tag" value="h2"/>
@@ -120,7 +124,7 @@
 					<cms:module
 						name="gallery"
 						action="show_image_list"
-						group="logos_may"
+						group="logos_june"
 						template="parts/gallery_image_template.xml"
 						>
 						<param name="thumbnail_size" value="150"/>
@@ -137,7 +141,7 @@
 					<cms:module
 						name="gallery"
 						action="show_image_list"
-						group="graduates_may"
+						group="graduates_june"
 						template="parts/gallery_image_template.xml"
 						>
 						<param name="thumbnail_size" value="300"/>
@@ -151,7 +155,7 @@
 					<cms:module
 						name="gallery"
 						action="show_image_list"
-						group="graduates_may"
+						group="graduates_june"
 						template="parts/gallery_image_template.xml"
 						>
 						<param name="thumbnail_size" value="150"/>
@@ -171,7 +175,7 @@
 					<cms:module
 						name="gallery"
 						action="show_image_list"
-						group="tutors_may"
+						group="tutors_june"
 						template="parts/gallery_image_template.xml"
 						>
 						<param name="thumbnail_size" value="300"/>
@@ -184,7 +188,7 @@
 					<cms:module
 						name="gallery"
 						action="show_image_list"
-						group="tutors_may"
+						group="tutors_june"
 						template="parts/gallery_image_template.xml"
 						>
 						<param name="thumbnail_size" value="150"/>
@@ -203,7 +207,7 @@
 					<cms:module
 						name="contact_form"
 						action="show"
-						text_id="contact_may"
+						text_id="contact_june"
 						/>
 					</div>
 				</cms:mobile>
@@ -232,7 +236,7 @@
 					<cms:module
 						name="contact_form"
 						action="show"
-						text_id="contact_may"
+						text_id="contact_june"
 						/>
 					</div>
 				</cms:desktop>
@@ -244,6 +248,8 @@
 				<param name="text" value="copyright_text"/>
 				<param name="light" value=""/>
 			</cms:template>
+							<!-- Popup Articles -->
+				<cms:template file="parts/june_links.xml">
 		</body>
 	</html>
 </document>

@@ -1,0 +1,66 @@
+<document>
+<!-- Popups -->
+	<div id="technology" class="popup">
+		<cms:module
+			name="articles"
+			action="show"
+			text_id="technology_article"
+			template="stock/article_generic.xml"
+			>
+			<param name="title" value=""/>
+		</cms:module>
+		<a href="#"><cms:svg file="site_sprite.svg" symbol="icon-cross"/></a>
+	</div>
+
+	<div id="strategy" class="popup">
+		<cms:module
+			name="articles"
+			action="show"
+			text_id="strategy_article"
+			group="june_articles_popups"
+			template="stock/article_generic.xml"
+			>
+			<param name="title" value=""/>
+		</cms:module>
+		<a href="#"><cms:svg file="site_sprite.svg" symbol="icon-cross"/></a>
+	</div>
+
+	<div id="advertisment" class="popup">
+		<cms:module
+			name="articles"
+			action="show"
+			text_id="advertisment_article"
+			group="june_articles_popups"
+			template="stock/article_generic.xml"
+			>
+			<param name="title" value=""/>
+		</cms:module>
+		<a href="#"><cms:svg file="site_sprite.svg" symbol="icon-cross"/></a>
+	</div>
+
+	<div id="funding" class="popup">
+		<cms:module
+			name="articles"
+			action="show"
+			text_id="funding_article"
+			group="june_articles_popups"
+			template="stock/article_generic.xml"
+			>
+			<param name="title" value=""/>
+		</cms:module>
+		<a href="#"><cms:svg file="site_sprite.svg" symbol="icon-cross"/></a>
+	</div>
+
+	<div id="farma" class="popup">
+		<cms:module
+			name="articles"
+			action="show"
+			text_id="farma_article"
+			group="june_articles_popups"
+			template="stock/article_generic.xml"
+			>
+			<param name="title" value=""/>
+		</cms:module>
+		<a href="#"><cms:svg file="site_sprite.svg" symbol="icon-cross"/></a>
+	</div>
+</document>
