@@ -4,15 +4,17 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:raw file="parts/gtmhead.txt"/>
 			<meta
 				http-equiv="refresh"
-				content="'1; url='.URL::make(array(), 'may.xml')"
+				content="'1; url='.URL::make(array(), 'june.xml')"
 				cms:eval="content"
 				/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body>
+		<cms:raw file="parts/gtmbody.txt"/>
 		</body>
 	</html>
 </document>
