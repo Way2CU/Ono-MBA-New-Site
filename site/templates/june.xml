@@ -249,7 +249,7 @@
 				<param name="light" value=""/>
 			</cms:template>
 							<!-- Popup Articles -->
-				<cms:template file="parts/june_links.xml">
+				<cms:template file="parts/june_links.xml" />
 		</body>
 	</html>
 </document>
