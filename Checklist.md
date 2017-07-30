@@ -9,7 +9,7 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] All the languages site is targeting are configured in `config.php`;
 	- [x] Site title is properly defined;
 	- [x] No errors or warnings are reported in the log file;
-	-> [x] Templates for registering and recovering user password are created and selected;
+	> - [x] Templates for registering and recovering user password are created and selected;
 	- [x] PNG images are optimized using `optipng` command;
 	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
 	- [x] SVG images are cleaned and optimized;
@@ -21,19 +21,19 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Styles are written to target LTR by default with RTL modifications, even on RTL-only sites.
 - Contact form:
 	- [x] SendGrid API access is configured;
-	-> [x] Mandrill API access is configured;
-	-> [x] SMTP credentials are configured and working;
-	-> [x] Default sender email;
-	-> [x] Default recipient;
+	> - [x] Mandrill API access is configured;
+	> - [x] SMTP credentials are configured and working;
+	> - [x] Default sender email;
+	> - [x] Default recipient;
 	- [x] Forms have honeypot field;
 	- [x] Templates for each form are created and assigned to form;
 	- [x] Templates have subject properly defined;
 	- [x] Form submits and client/developer receives email.
 - Shop:
-	-> [x] Desired payment method is enabled and configured;
-	-> [x] Default warehouse is created;
-	-> [x] Default currency is selected;
-	-> [x] Contact form template for transaction is created and selected;
-	-> [x] Shop is not in testing mode.
+	> - [x] Desired payment method is enabled and configured;
+	> - [x] Default warehouse is created;
+	> - [x] Default currency is selected;
+	> - [x] Contact form template for transaction is created and selected;
+	> - [x] Shop is not in testing mode.
 - Articles:
-	-> [x] Each article has a title even if it's not used;
+	> - [x] Each article has a title even if it's not used;
